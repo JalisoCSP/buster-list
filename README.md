@@ -1,24 +1,18 @@
-# README
+# Usage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hey Jason, I've made this with a standard rails new, but it does have some extra
+stuff that is definitely not required.
 
-Things you may want to cover:
+1. Clone this repo locally. `git clone git@github.com:JalisoCSP/buster-list.git`
 
-* Ruby version
+2. `yarn install --check-files`
 
-* System dependencies
+3. `bundle install`
 
-* Configuration
+4. `rails db:create db:migrate`
 
-* Database creation
+5. `rails s`
 
-* Database initialization
+6. Navigate to localhost:3000 (default)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The code you likely want to look at is in the commit: 36053bb
