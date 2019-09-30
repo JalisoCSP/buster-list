@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @life_item.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @life_item.date %>
+</p>
+
+<%= link_to 'Edit', edit_life_item_path(@life_item) %> |
+<%= link_to 'Back', life_items_path %>

@@ -1,0 +1,2 @@
+class LifeItem < ApplicationRecord
+end
