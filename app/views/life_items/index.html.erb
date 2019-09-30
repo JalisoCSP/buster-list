@@ -1,5 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Life Cycle</h1>
+
+<% @life_cycle.each do |year, months| %>
+  <span style="background-color: yellow;">
+    <%= year %>
+  </span>
+  <% months.each do |month| %>
+    <span style="padding: 2px; border: 1px solid green">
+      <%= month %>
+    </span>
+  <% end %>
+<% end %>
+
 <h1>Life Items</h1>
 
 <table>

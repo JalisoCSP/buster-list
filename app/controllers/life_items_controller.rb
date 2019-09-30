@@ -5,6 +5,17 @@ class LifeItemsController < ApplicationController
   # GET /life_items.json
   def index
     @life_items = LifeItem.all
+
+    date_from = Date.parse('1990-01-30')
+    date_to = date_from + 100.years
+    date_range = date_from..date_to
+
+    hash = Hash[date_range.group_by(&:year).map do |y, items|
+      [y, items.group_by { |d| d.month }.map { |month| "" }]
+    end]
+    @life_cycle = @life_items.each_with_object(hash) do |items, h|
+      h[items.date.beginning_of_year.year][items.date.beginning_of_month.month] = items.title
+    end
   end
 
   # GET /life_items/1
